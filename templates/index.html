@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apna Doctor - Disease Prediction</title>
+
+  <!-- Google Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Materialize CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #f0f4f8;
+    }
+
+    .nav-wrapper {
+      padding: 0 20px;
+    }
+
+    .brand-logo {
+      font-weight: 600;
+    }
+
+    .banner {
+      background: linear-gradient(to right, #2196f3, #42a5f5);
+      color: white;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 2.5rem;
+      font-weight: 600;
+    }
+
+    h4.section-title {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .card-fixed {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-fixed .card-image {
+      position: relative;
+      height: 180px;
+      overflow: hidden;
+    }
+
+    .card-fixed .card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-fixed .tag-title {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #ff7043;
+      color: white;
+      padding: 6px 12px;
+      font-size: 13px;
+      font-weight: bold;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .card-fixed .card-content h6 {
+      font-weight: 600;
+      color: #1a237e;
+      margin-top: 10px;
+      margin-bottom: 6px;
+    }
+
+    .card-fixed .card-action {
+      text-align: center;
+    }
+
+    .card-fixed .card-action .btn {
+      width: 90%;
+      border-radius: 20px;
+      margin-bottom: 10px;
+    }
+
+    footer.page-footer {
+      padding-top: 20px;
+    }
+
+    footer h6 {
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="blue darken-2">
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">Apna Doctor</a>
+      <a href="#" class="sidenav-trigger" data-target="mobile-demo"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/kyd">Know Your Disease</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <ul class="sidenav" id="mobile-demo">
+    <li><a href="/">Home</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/kyd">Know Your Disease</a></li>
+    <li><a href="/contact">Contact</a></li>
+  </ul>
+
+  <!-- Banner -->
+  <div class="banner animate__animated animate__fadeInDown">
+    Your Health, Our Priority
+  </div>
+
+  <!-- Prediction Models -->
+  <div class="container section">
+    <h4 class="center-align section-title">Prediction Models</h4>
+    <div class="row">
+
+      <!-- Diabetes -->
+      <div class="col s12 m6 l3">
+        <div class="card hoverable card-fixed">
+          <div class="card-image">
+            <img src="{{ url_for('static', filename='img/diabetes.jpeg') }}" alt="Diabetes">
+            <div class="tag-title">Diabetes</div>
+          </div>
+          <div class="card-content">
+            <h6>Diabetes Prediction</h6>
+            <p>Predict diabetes based on health parameters.</p>
+          </div>
+          <div class="card-action">
+            <a href="/diabetes" class="btn blue darken-3">Take Test</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alzheimer -->
+      <div class="col s12 m6 l3">
+        <div class="card hoverable card-fixed">
+          <div class="card-image">
+            <img src="{{ url_for('static', filename='img/Alzheimer Detection.jpeg') }}" alt="Alzheimer">
+            <div class="tag-title">Alzheimer</div>
+          </div>
+          <div class="card-content">
+            <h6>Alzheimer Detection</h6>
+            <p>Upload brain scans to detect Alzheimer’s.</p>
+          </div>
+          <div class="card-action">
+            <a href="/alzheimer" class="btn blue darken-3">Take Test</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BMI -->
+      <div class="col s12 m6 l3">
+        <div class="card hoverable card-fixed">
+          <div class="card-image">
+            <img src="{{ url_for('static', filename='img/bmi.png') }}" alt="BMI">
+            <div class="tag-title">BMI</div>
+          </div>
+          <div class="card-content">
+            <h6>BMI Calculator</h6>
+            <p>Calculate your Body Mass Index (BMI) with ease.</p>
+          </div>
+          <div class="card-action">
+            <a href="/bmi" class="btn blue darken-3">Take Test</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Liver -->
+      <div class="col s12 m6 l3">
+        <div class="card hoverable card-fixed">
+          <div class="card-image">
+            <img src="{{ url_for('static', filename='img/liver.webp') }}" alt="Liver">
+            <div class="tag-title">Liver Disease</div>
+          </div>
+          <div class="card-content">
+            <h6>Liver Disease Prediction</h6>
+            <p>Predict liver disease using health indicators.</p>
+          </div>
+          <div class="card-action">
+            <a href="/liver" class="btn blue darken-3">Take Test</a>
+          </div>
+        </div>
+      </div>
+      <!-- COVID-19 -->
+<div class="col s12 m6 l3">
+  <div class="card hoverable card-fixed">
+    <div class="card-image">
+      <img src="{{ url_for('static', filename='img/covid.jpeg') }}" alt="COVID-19">
+      <div class="tag-title">COVID-19</div>
+    </div>
+    <div class="card-content">
+      <h6>COVID-19 Detection</h6>
+      <p>Upload chest X-ray images for COVID-19 prediction.</p>
+    </div>
+    <div class="card-action">
+      <a href="/covid" class="btn blue darken-3">Take Test</a>
+    </div>
+  </div>
+</div>
+
