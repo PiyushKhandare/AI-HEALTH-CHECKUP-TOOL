@@ -33,12 +33,11 @@ cd project_folder
 
 Run the app:
 
-```bash
 python app.py
 
 Open in browser:
 
-```cpp
+
 http://127.0.0.1:5000/
 
 
