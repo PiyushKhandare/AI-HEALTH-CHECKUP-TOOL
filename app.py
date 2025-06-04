@@ -215,8 +215,8 @@ def appointment():
 
 # Function to send email confirmation
 def send_email(to_email, patient_name, disease, doctor, date, time_slot):
-    from_email = "piyushkhandare50@gmail.com"
-    password = "nkbh mrid aitw djpx"
+    from_email = ""
+    password = ""
     subject = "Appointment Confirmation"
     body = f"""
     Dear {patient_name},
