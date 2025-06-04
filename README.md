@@ -1,0 +1,2 @@
+# AI HEALTH CHECKUP TOOL
+ AI Health Checkup Tool is an intelligent web-based system designed to analyze user-provided health parameters (like age, symptoms, blood pressure, glucose levels, etc.) and predict potential health conditions using machine learning models. It offers instant health insights, disease risk predictions (e.g., diabetes, Alzheimer's, PCOD), and personalized health tips—empowering users to take early action and make informed medical decisions from the comfort of their homes.
